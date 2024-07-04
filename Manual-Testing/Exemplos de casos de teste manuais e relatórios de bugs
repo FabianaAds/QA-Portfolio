@@ -1,1 +1,54 @@
 
+Exemplo de Caso de Teste Manual:
+Nome do Teste: Login no Sistema
+
+Objetivo: Verificar se um usuário pode fazer login corretamente no sistema.
+
+Precondições:
+
+O sistema está funcionando corretamente.
+O usuário possui credenciais válidas.
+Passos:
+
+Abrir a página de login.
+Inserir nome de usuário válido.
+Inserir senha válida.
+Clicar no botão "Entrar".
+Resultados Esperados:
+
+O usuário é redirecionado para a página inicial do sistema.
+O nome de usuário e a senha são autenticados corretamente.
+Critérios de Sucesso:
+
+O usuário consegue acessar a página inicial sem erros.
+A mensagem de erro é exibida corretamente caso as credenciais sejam inválidas.
+Exemplo de Relatório de Bug:
+Título: Erro ao realizar compra no carrinho de compras
+
+Descrição:
+Durante o teste de compra no carrinho de compras, identifiquei um problema ao tentar adicionar um item ao carrinho. Ao clicar no botão "Adicionar ao Carrinho", nada acontece e o item não é adicionado.
+
+Passos para Reproduzir:
+
+Logue-se na conta de usuário.
+Navegue até a página de produtos.
+Escolha um produto e clique no botão "Adicionar ao Carrinho".
+Resultados Esperados:
+
+O item selecionado deve ser adicionado ao carrinho de compras.
+Resultados Observados:
+
+Nada acontece ao clicar no botão "Adicionar ao Carrinho". O item não é adicionado e não há feedback visual ou mensagem de erro.
+Ambiente:
+
+Navegador: Google Chrome versão 92.0.4515.107
+Sistema Operacional: Windows 10
+Anexos:
+
+Capturas de tela do momento em que o problema ocorreu.
+Prioridade: Alta
+
+Impacto: Impede que os usuários realizem compras no site.
+
+Notas Adicionais:
+Este problema foi reproduzido consistentemente em diferentes sessões de teste e em diferentes produtos no catálogo.
