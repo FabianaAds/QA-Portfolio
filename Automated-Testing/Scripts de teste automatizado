@@ -1,1 +1,96 @@
 
+// Arquivo: login_spec.js
+
+describe('Testes de Login', () => {
+  beforeEach(() => {
+    // Antes de cada teste, visita a página de login
+    cy.visit('https://exemplo.com/login')
+  })
+
+  it('Login com credenciais válidas', () => {
+    // Insere credenciais válidas e faz login
+    cy.get('input[name=username]').type('usuario123')
+    cy.get('input[name=password]').type('senha123')
+    cy.get('button[type=submit]').click()
+
+    // Verifica se o usuário foi redirecionado para a página inicial
+    cy.url().should('include', '/dashboard')
+
+    // Verifica se o nome do usuário está correto na interface
+    cy.get('.user-profile').should('contain', 'Usuário Teste')
+  })
+
+  it('Login com senha incorreta', () => {
+    // Insere nome de usuário válido e senha incorreta
+    cy.get('input[name=username]').type('usuario123')
+    cy.get('input[name=password]').type('senha_errada')
+    cy.get('button[type=submit]').click()
+
+    // Verifica se é exibida uma mensagem de erro adequada
+    cy.get('.error-message').should('contain', 'Senha incorreta')
+
+    // Verifica se o formulário de login ainda está visível
+    cy.get('form#login-form').should('be.visible')
+  })
+
+  it('Login com usuário não registrado', () => {
+    // Insere nome de usuário não registrado e senha válida
+    cy.get('input[name=username]').type('usuario_nao_registrado')
+    cy.get('input[name=password]').type('senha123')
+    cy.get('button[type=submit]').click()
+
+    // Verifica se é exibida uma mensagem de erro adequada
+    cy.get('.error-message').should('contain', 'Usuário não encontrado')
+
+    // Verifica se o formulário de login ainda está visível
+    cy.get('form#login-form').should('be.visible')
+  })
+
+  it('Login sem preencher campos obrigatórios', () => {
+    // Tenta fazer login sem preencher nenhum campo
+    cy.get('button[type=submit]').click()
+
+    // Verifica se são exibidas mensagens de erro nos campos obrigatórios
+    cy.get('.username-error').should('contain', 'Campo obrigatório')
+    cy.get('.password-error').should('contain', 'Campo obrigatório')
+
+    // Verifica se o formulário de login ainda está visível
+    cy.get('form#login-form').should('be.visible')
+  })
+
+  it('Login com XSS (Cross-Site Scripting)', () => {
+    // Insere nome de usuário com XSS
+    cy.get('input[name=username]').type('<script>alert("XSS")</script>')
+    cy.get('input[name=password]').type('senha123')
+    cy.get('button[type=submit]').click()
+
+    // Verifica se o usuário não consegue fazer login e é exibida uma mensagem de erro adequada
+    cy.get('.error-message').should('contain', 'Caracteres inválidos detectados')
+
+    // Verifica se o formulário de login ainda está visível
+    cy.get('form#login-form').should('be.visible')
+  })
+})
+
+
+Cenários 
+Login com senha incorreta:
+
+Testa inserir um nome de usuário válido e uma senha incorreta. Verifica se é exibida uma mensagem de erro apropriada e se o formulário de login continua visível.
+Login com usuário não registrado:
+
+Testa inserir um nome de usuário não registrado e uma senha válida. Verifica se é exibida uma mensagem de erro apropriada e se o formulário de login continua visível.
+Login sem preencher campos obrigatórios:
+
+Testa fazer login sem preencher nenhum campo. Verifica se são exibidas mensagens de erro nos campos obrigatórios e se o formulário de login continua visível.
+Login com XSS (Cross-Site Scripting):
+
+Testa inserir um nome de usuário que contenha código XSS. Verifica se o sistema detecta e impede o login, exibindo uma mensagem de erro adequada.
+
+
+
+
+
+
+
+
