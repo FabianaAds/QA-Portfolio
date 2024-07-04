@@ -12,5 +12,5 @@ Sou um profissional de QA com experiência em testes manuais e automatizados, fo
   - Scripts de teste automatizado.
 - **Documentation/**
   - Planos de teste, critérios de aceitação e documentação técnica.
-  - 
+    
 Sinta-se à vontade para explorar e entrar em contato para mais informações ou colaborações!
