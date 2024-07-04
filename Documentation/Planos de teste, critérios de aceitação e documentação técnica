@@ -4,15 +4,20 @@ Objetivos e Escopo Definidos: Deve-se definir claramente os objetivos dos testes
 Detalhamento dos Casos de Teste: Cada caso de teste deve incluir passos detalhados, entradas esperadas, resultados esperados e critérios de sucesso.
 Estratégia de Teste: Incluir a estratégia geral de testes, como testes funcionais, de desempenho, de segurança, etc.
 Critérios de Saída: Definir os critérios para encerrar os testes e passar para a próxima fase ou lançamento.
+
+
 Critérios de Aceitação:
 Mensuráveis e Objetivos: Os critérios de aceitação devem ser mensuráveis e claros, deixando pouco espaço para interpretação.
 Alinhados com o Cliente: Devem refletir os requisitos e expectativas do cliente ou usuário final.
 Inclusão de Exemplos: Incluir exemplos concretos de comportamento esperado para cada critério.
 Priorização: Classificar os critérios por prioridade, indicando quais são essenciais para a aceitação do produto.
 Validação Automatizada: Onde possível, os critérios devem ser validados automaticamente através de testes automatizados.
+
+
 Documentação Técnica:
 Completa e Atualizada: A documentação técnica deve estar completa, cobrindo todos os aspectos importantes do sistema ou componente.
 Formato Apropriado: Usar um formato que seja fácil de navegar e entender, como documentos estruturados, diagramas, e anotações claras.
 Manutenção Regular: Manter a documentação atualizada conforme o sistema evolui, refletindo mudanças e novas funcionalidades.
 Audiência Definida: Considerar quem usará a documentação (desenvolvedores, testadores, usuários finais) e adaptar o conteúdo para eles.
+
 Versionamento: Utilizar um sistema de versionamento para a documentação, permitindo rastrear alterações ao longo do tempo.
