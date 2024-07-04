@@ -9,7 +9,7 @@ Sou um profissional de QA com experiência em testes manuais e automatizados, fo
 - **Manual-Testing/**
   - Exemplos de casos de teste manuais e relatórios de bugs.
 - **Automated-Testing/**
-  - Scripts de teste automatizado.
+  - Scripts de teste automatizado com cypress
 - **Documentation/**
   - Planos de teste, critérios de aceitação e documentação técnica.
     
